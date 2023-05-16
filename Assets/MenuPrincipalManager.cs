@@ -12,6 +12,10 @@ public class MenuPrincipalManager : MonoBehaviour
     [SerializeField] private GameObject painelInfo;
     [SerializeField] private GameObject painelHelp;
 
+    [SerializeField] private AudioSource somAvancar;
+    [SerializeField] private AudioSource somVoltar;
+
+
     public void Start(){        
         Menu();
     }
@@ -23,41 +27,51 @@ public class MenuPrincipalManager : MonoBehaviour
         painelHelp.SetActive(false);
     }
     public void Jogar(){
+        somAvancar.Play();
         SceneManager.LoadScene(nomeDoLevelDoJogo);
     }
     public void AbrirOpcoes(){
+        somAvancar.Play();
         painelMenuInicial.SetActive(false);
         painelOpcoes.SetActive(true);
     }
     public void FecharOpcoes(){
+        somVoltar.Play();
         painelMenuInicial.SetActive(true);
         painelOpcoes.SetActive(false);
     }
     public void AbrirAcessibilidades(){
+        somAvancar.Play();
         painelOpcoes.SetActive(false);
         painelAcessibilidades.SetActive(true);
     }
     public void FecharAcessibilidades(){
+        somVoltar.Play();
         painelAcessibilidades.SetActive(false);
         painelOpcoes.SetActive(true);
     }
     public void AbrirInfo(){
+        somAvancar.Play();
         painelInfo.SetActive(true);
         painelMenuInicial.SetActive(false);
     }
     public void FecharInfo(){
+        somVoltar.Play();
         painelInfo.SetActive(false);
         painelMenuInicial.SetActive(true);
     }
     public void AbrirHelp(){
+        somAvancar.Play();
         painelHelp.SetActive(true);
         painelMenuInicial.SetActive(false);
     }
     public void FecharHelp(){
+        somVoltar.Play();
         painelHelp.SetActive(false);
         painelMenuInicial.SetActive(true);
     }
     public void SairJogo(){
+        somVoltar.Play();
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
         #else
