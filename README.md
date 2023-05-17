@@ -6,14 +6,17 @@
 
 # JAIREL
 
-ㅤUm jogo de ordas com tema Folclore Brasileiro e conta com personas como: <br>
-  - Mula sem cabela
+ㅤㅤUm jogo de ordas com tema Folclore Brasileiro e conta com personas como: <br>
+  - Mula sem cabeça
   - Saci Perere
-  - Crupira <br>
-  Entre outros
-ㅤThis site had a lot (6) of 'posts', but only 'Nazismo' works, cuz this is our theme of geopolitic work
+  - Boto cor de Rosa
+  - Curupira <br>
+  Entre outros... <br></br>
+    A ideia inicial é trazer um jogo de layers no estilo ``plants vs zombies`` mesclado com ordas por level no estilo ``swamp attack`` 
 
 ## Backstory
+
+``Loading...``
 
 ## Softwares 
 ㅤ
@@ -23,9 +26,7 @@
 
 ## Overview
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/125659884/232176079-c709b98f-7cb9-4100-bb51-d7d812b98023.gif" height="410">
-  <br>
-  <img src="https://user-images.githubusercontent.com/125659884/232169574-3ea506de-2f5f-46e1-a1dd-89df418fa6c4.png" height="800">
+  <img src="https://github.com/alvimdev/2023-303-jairel/assets/83983141/00846b27-7364-45be-b327-8669db8ce53d" height="410">
 </div>
 
 ## Contribuitors:
