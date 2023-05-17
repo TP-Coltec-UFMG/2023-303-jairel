@@ -4,7 +4,7 @@
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/TP-Coltec-UFMG/2023-303-jairel?style=for-the-badge)
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/TP-Coltec-UFMG/2023-303-jairel?style=for-the-badge)
 
-# JAIREL
+# ЖАЙРЕЛ
 
 ㅤㅤUm jogo de ordas com tema Folclore Brasileiro e conta com personas como: <br>
   - Mula sem cabeça
