@@ -16,15 +16,20 @@ public class MenuPrincipalManager : MonoBehaviour
     [SerializeField] private AudioSource somVoltar;
 
 
-    public void Start(){        
-        Menu();
-    }
-    public void Menu(){
-        painelMenuInicial.SetActive(true);
+    public void setFalse(){
+        painelMenuInicial.SetActive(false);
         painelAcessibilidades.SetActive(false);
         painelOpcoes.SetActive(false);
         painelInfo.SetActive(false);
         painelHelp.SetActive(false);
+    }
+
+    public void Start(){      
+        Menu();
+    }
+    public void Menu(){
+        setFalse();
+        painelMenuInicial.SetActive(true);
     }
     public void Jogar(){
         somAvancar.Play();
@@ -32,42 +37,42 @@ public class MenuPrincipalManager : MonoBehaviour
     }
     public void AbrirOpcoes(){
         somAvancar.Play();
-        painelMenuInicial.SetActive(false);
+        setFalse();
         painelOpcoes.SetActive(true);
     }
     public void FecharOpcoes(){
         somVoltar.Play();
+        setFalse();
         painelMenuInicial.SetActive(true);
-        painelOpcoes.SetActive(false);
     }
     public void AbrirAcessibilidades(){
         somAvancar.Play();
-        painelOpcoes.SetActive(false);
+        setFalse();
         painelAcessibilidades.SetActive(true);
     }
     public void FecharAcessibilidades(){
         somVoltar.Play();
-        painelAcessibilidades.SetActive(false);
+        setFalse();
         painelOpcoes.SetActive(true);
     }
     public void AbrirInfo(){
         somAvancar.Play();
+        setFalse();
         painelInfo.SetActive(true);
-        painelMenuInicial.SetActive(false);
     }
     public void FecharInfo(){
         somVoltar.Play();
-        painelInfo.SetActive(false);
+        setFalse();
         painelMenuInicial.SetActive(true);
     }
     public void AbrirHelp(){
         somAvancar.Play();
+        setFalse();
         painelHelp.SetActive(true);
-        painelMenuInicial.SetActive(false);
     }
     public void FecharHelp(){
         somVoltar.Play();
-        painelHelp.SetActive(false);
+        setFalse();
         painelMenuInicial.SetActive(true);
     }
     public void SairJogo(){
