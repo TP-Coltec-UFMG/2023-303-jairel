@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MenuPrincipalManager : MonoBehaviour
 {
-    [SerializeField] private string nomeDoLevelDoJogo;
+    // [SerializeField] private string nomeDoLevelDoJogo;
+
     [SerializeField] private GameObject painelMenuInicial;
+    [SerializeField] private GameObject painelFases;
     [SerializeField] private GameObject painelOpcoes;
     [SerializeField] private GameObject painelAcessibilidades;
     [SerializeField] private GameObject painelInfo;
@@ -18,6 +20,7 @@ public class MenuPrincipalManager : MonoBehaviour
 
     public void setFalse(){
         painelMenuInicial.SetActive(false);
+        painelFases.SetActive(false);
         painelAcessibilidades.SetActive(false);
         painelOpcoes.SetActive(false);
         painelInfo.SetActive(false);
@@ -31,10 +34,18 @@ public class MenuPrincipalManager : MonoBehaviour
         setFalse();
         painelMenuInicial.SetActive(true);
     }
-    public void Jogar(){
+    public void AbrirFases(){
         somAvancar.Play();
-        SceneManager.LoadScene(nomeDoLevelDoJogo);
+        setFalse();
+        painelFases.SetActive(true);
     }
+
+    public void FecharFases(){
+        somVoltar.Play();
+        setFalse();
+        painelMenuInicial.SetActive(true);
+    }
+    
     public void AbrirOpcoes(){
         somAvancar.Play();
         setFalse();
