@@ -26,7 +26,7 @@
 
 ## Overview
 <div align="center">
-    <img src="https://github.com/alvimdev/2023-303-jairel/assets/83983141/7a6cb8ea-6d77-4b05-9652-e5bdd26ecb99" height="410">
+    <img src="https://github.com/alvimdev/2023-303-jairel/assets/83983141/548b2e71-3268-4bd1-b1bd-14e89adf4349" height="410">
     <p>Esse é o design do menu inicial, nele temos os botões que seguem para os submenus</p>
     <br>
     <img src="https://github.com/alvimdev/2023-303-jairel/assets/83983141/24ea62f0-244e-4619-8a97-c434c76a6c0b" height="410">
@@ -40,12 +40,17 @@
     <br>
     <img src="https://github.com/alvimdev/2023-303-jairel/assets/83983141/3247c31e-ffa6-4445-b1a6-b061ce0df5e2" height="410">
     <p>No seção <strong>sobre</strong> temos uma breve descrição do grupo e, também, do projeto</p>
+    <br>
+    <img src="https://github.com/alvimdev/2023-303-jairel/assets/83983141/28252568-2bdb-41a4-9a91-f6771a0f23f0">
+    <p>Após clicar em jogar, o player é redirecionado para a tela de seleção de 'fases', onde é possível escolher qual personagem do folclore quer combater</p>
+  <br>
+    <img src="https://github.com/alvimdev/2023-303-jairel/assets/83983141/d41fea97-37d4-4969-bf33-783fa79ce39e">
+    <p>Imagem do jogo inicial</p>
 </div>
 
 <br><br>
 
 ## Contribuitors:
-
 
 <dl>
   <dd>
