@@ -68,7 +68,7 @@ public class Jogador : MonoBehaviour
 	private void OnControllerColliderHit(ControllerColliderHit hit)
 	{
 	    // Verificar se a colisão é com a parede
-	    if (hit.gameObject.CompareTag("barrera"))
+	    if (hit.gameObject.CompareTag("parede"))
 	    {
 	        // Obter a direção do movimento do jogador
 	        Vector3 moveDirection = inputs.normalized;
