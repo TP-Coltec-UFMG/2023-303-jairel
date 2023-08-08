@@ -19,6 +19,7 @@ public class Mob : MonoBehaviour
         {
             Destroy(gameObject); // Destroi a cobra
             Destroy(other.gameObject); // Destroi o tiro
+		 ++GameManager.instance.mobsEliminated;
         }
         
         if(other.CompareTag("barrera"))

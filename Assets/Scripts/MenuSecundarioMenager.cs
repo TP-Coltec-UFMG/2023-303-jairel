@@ -20,5 +20,9 @@ public class MenuSecundarioMenager : MonoBehaviour
     public void AvancaFases(){
         SceneManager.LoadScene(2);
     }
+    
+    public void FaseMula(){
+        SceneManager.LoadScene("MulaSemCabeca");
+    }
 }
  

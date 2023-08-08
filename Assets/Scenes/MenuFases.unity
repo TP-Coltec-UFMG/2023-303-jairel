@@ -290,7 +290,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 135897700}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2069533115}
+        m_TargetAssemblyTypeName: MenuSecundarioMenager, Assembly-CSharp
+        m_MethodName: FaseMula
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &135897700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,7 +596,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 515312783}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2069533115}
+        m_TargetAssemblyTypeName: MenuSecundarioMenager, Assembly-CSharp
+        m_MethodName: FaseMula
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &515312783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2075,8 +2099,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1491437051}
   m_HandleRect: {fileID: 1491437050}
   m_Direction: 0
-  m_Value: 0.4999999
-  m_Size: 0.47799706
+  m_Value: 0.5
+  m_Size: 0.24131295
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
