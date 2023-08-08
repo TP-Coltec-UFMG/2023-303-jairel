@@ -6,8 +6,14 @@ using UnityEngine.SceneManagement;
 public class MenuSecundarioMenager : MonoBehaviour
 {
     [SerializeField] private string MenuPrincipal;
+    [SerializeField] private string MenuFases;
 
     public void Voltar(){        
-        SceneManager.LoadScene(MenuPrincipal);
+        SceneManager.LoadScene(0);
+    }
+
+    public void AvancaFases(){
+        SceneManager.LoadScene(2);
     }
 }
+ 

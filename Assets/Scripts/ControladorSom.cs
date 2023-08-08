@@ -3,35 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class ControladorSom : MonoBehaviour
 {
-    private bool estadoSom = true;
-    [SerializeField] private AudioSource fundoMusical;
-
-    [SerializeField] private Sprite somLigadoSprite;
-    [SerializeField] private Sprite somDesligadoSprite;
-
-    [SerializeField] private GameObject button;
-
-    public void LigarDesligarSom()
-    {
-        estadoSom = !estadoSom;
-        fundoMusical.enabled = estadoSom;
-
-        if (estadoSom)
-        {
-            button.GetComponent<Image>().sprite = somLigadoSprite;
-            //muteImage.sprite = somLigadoSprite;
-        }
-        else
-        {
-            button.GetComponent<Image>().sprite = somDesligadoSprite;
-            //muteImage.sprite = somDesligadoSprite;
-        }
-    }
+    public AudioMixer mixer;
 
     public void VolumeMusical(float value){
-        fundoMusical.volume = value;
+        mixer.SetFloat("Fundo", Mathf.Log10(value) * 20);
+    }
+
+    public void VolumeEfeitosSonoros(float value){
+        mixer.SetFloat("EfeitosSonoros", Mathf.Log10(value) * 20);
     }
 }
