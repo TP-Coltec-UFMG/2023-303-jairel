@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     [SerializeField] private GameObject GameOver;
-
-    [SerializeField] private GameObject dialogueSequence;
+    [SerializeField] private GameObject DialogueManager;
+    [SerializeField] private GameObject FiltroDaltonismo;
     private int currentDialogueIndex = 0;
     private bool showingDialogues = false;
 
@@ -45,6 +45,10 @@ public class GameManager : MonoBehaviour
                 bossSpawned = 1; // Para garantir que o chefe seja spawnado apenas uma vez
                 Invoke("SpawnBoss", 4f); // Espere 4 segundos após eliminar todos os inimigos para spawnar o chefe
             }
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            this.FiltroDaltonismo.SetActive(true);
         }
     }
 
@@ -84,5 +88,24 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
         this.GameOver.SetActive(true);
+
+        Jogador jogadorScript = FindObjectOfType<Jogador>();
+        if (jogadorScript != null)
+        {
+            jogadorScript.SetControlsEnabled(false); // Desabilita os controles do jogador
+        }
     }
+
+    public void showWin()
+    {
+        Time.timeScale = 0;
+        this.DialogueManager.SetActive(true);
+
+        Jogador jogadorScript = FindObjectOfType<Jogador>();
+        if (jogadorScript != null)
+        {
+            jogadorScript.SetControlsEnabled(false); // Desabilita os controles do jogador
+        }
+    }
+
 }

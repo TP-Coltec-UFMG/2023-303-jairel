@@ -12,10 +12,15 @@ public class Jogador : MonoBehaviour
 	public float goiabaSpeed;
 	[SerializeField] private GameObject goiabaPrefab;
 	[SerializeField] private Transform firePoint;
+
+	private bool controlsEnabled = true; 
 	
+	public static Jogador instance;
+
 	// Start is called before the first frame update
 	void Start()
 	{
+		instance = this;
 	    character = GetComponent<CharacterController>(); 
 	    animator = GetComponent<Animator>();
 	}
@@ -23,6 +28,10 @@ public class Jogador : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+
+		if (!controlsEnabled)
+            return; 
+
 	    inputs.Set(0, Input.GetAxis("Vertical"), 0); 
 	    character.Move(inputs * Time.deltaTime * velocidade);
 	    if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Keypad0)){
@@ -41,6 +50,10 @@ public class Jogador : MonoBehaviour
 	
 	private void MoveWithMouse()
 	{
+
+		if (!controlsEnabled)
+            return; 
+
 	    // Obter a posição do mouse no mundo
 	    Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 	
@@ -52,6 +65,10 @@ public class Jogador : MonoBehaviour
 	}
 	
 	private void Shoot(){
+
+		if (!controlsEnabled)
+            return;
+
 	    GameObject goiaba = Instantiate(goiabaPrefab, firePoint.position, Quaternion.identity);
 	    Rigidbody2D rb = goiaba.GetComponent<Rigidbody2D>();
 	
@@ -83,5 +100,10 @@ public class Jogador : MonoBehaviour
 	        inputs -= moveDirectionProjection;
 	    }
 	}
+
+	public void SetControlsEnabled(bool isEnabled)
+    {
+        controlsEnabled = isEnabled;
+    }
 	
 }
