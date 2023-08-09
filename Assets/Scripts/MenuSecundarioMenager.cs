@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuSecundarioMenager : MonoBehaviour
 {
-    [SerializeField] private string MenuPrincipal;
-    [SerializeField] private string MenuFases;
-    [SerializeField] private string Inventario;
 
     [SerializeField] private AudioSource somAvancar;
     [SerializeField] private AudioSource somVoltar;
@@ -32,18 +29,19 @@ public class MenuSecundarioMenager : MonoBehaviour
 
     private void CarregarCenaMenuPrincipal()
     {
-        SceneManager.LoadScene(MenuPrincipal);
+        SceneManager.LoadScene("MenuPrincipal");
     }
 
     private void CarregarCenaInventario()
     {
-        SceneManager.LoadScene(Inventario);
+        SceneManager.LoadScene("Inventario");
     }
 
     private void CarregarCenaFases()
     {
-        SceneManager.LoadScene(MenuFases);
-
+        SceneManager.LoadScene("MenuFases");
+    }
+    
     public void FaseMula(){
         SceneManager.LoadScene("MulaSemCabeca");
     }
