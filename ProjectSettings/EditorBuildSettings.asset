@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/JogoCena.unity
     guid: efa4e0d57cd748d1bb1a34e884b222e7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MulaSemCabeca.unity
     guid: 198596dce34cc7411a6843e1be789121
   - enabled: 1

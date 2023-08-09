@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f3a382023f20c024ea416f1b13b6219b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d79079adaad5b584291a7fcfa66c81dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -545,7 +545,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596291555}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.09, y: -0.5, z: 0}
+  m_LocalPosition: {x: -8.83, y: -0.5, z: 0}
   m_LocalScale: {x: 2.6673, y: 2.5777364, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -636,12 +636,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ea7ced283b9c044b1ca008f91c0162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossPrefab: {fileID: 7661553450059480640, guid: 654341a0464acea41a72c7386c6806bb, type: 3}
   mobPrefab: {fileID: 1103550939320839992, guid: 51a57e1028c010345ad665e0a2498626, type: 3}
   tiroPrefab: {fileID: 4421315683067004294, guid: 78b22edb3cb291104ba1cc0ec34fdbc8, type: 3}
-  numeroMobs: 20
+  numeroMobs: 10
   velocidadeMob: 5
   intervaloEntreSpawns: 1
+  mobsEliminated: 0
   GameOver: {fileID: 1949587624}
+  dialogueSequence: {fileID: 0}
 --- !u!114 &1196790919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,7 +668,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196790917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.12, y: 4.5, z: -0.016560297}
+  m_LocalPosition: {x: -10.8, y: 5.31, z: -0.016560297}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -817,8 +820,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321901416}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0218, y: 0.0292, z: 0}
-  m_LocalScale: {x: 1.1093227, y: 0.9252323, z: 0.66781515}
+  m_LocalPosition: {x: 0.0036, y: 0.0292, z: 0}
+  m_LocalScale: {x: 1.1112028, y: 0.9252323, z: 0.66781515}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1150,7 +1153,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a1b1d622e6bf5cc479d75ec02a8726c4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 03973f8e0b46bee43bb3bd5b6f06cfca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1362,7 +1365,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cc3e371356b71a1409fbd73032cd662b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4563342c9d25934ca84573370a1580c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1438,7 +1441,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 04476f975a3fd3043aadc5c6b53ddcba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a4602a031d5e1049b2aa6ec39c5b5ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

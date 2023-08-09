@@ -35,7 +35,7 @@ public class MenuPrincipalManager : MonoBehaviour
     
     public void AbrirInventario()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Inventario");
     }
 
     public void AbrirOpcoes(){

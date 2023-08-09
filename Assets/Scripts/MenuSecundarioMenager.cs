@@ -32,16 +32,19 @@ public class MenuSecundarioMenager : MonoBehaviour
 
     private void CarregarCenaMenuPrincipal()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(MenuPrincipal);
     }
 
     private void CarregarCenaInventario()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(Inventario);
     }
 
     private void CarregarCenaFases()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(MenuFases);
+
+    public void FaseMula(){
+        SceneManager.LoadScene("MulaSemCabeca");
     }
 }

@@ -8,7 +8,6 @@ public class GameOver : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
-        	Debug.Log("oi");
-            //SceneManager.LoadScene("MulaSemCabeca");
+            SceneManager.LoadScene("MenuFases");
     }
 }
