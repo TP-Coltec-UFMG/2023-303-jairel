@@ -13,6 +13,7 @@ public class MenuSecundarioMenager : MonoBehaviour
     {
         somVoltar.Play();
         Invoke("CarregarCenaMenuPrincipal", somVoltar.clip.length);
+        SceneManager.LoadScene(0);
     }
 
     public void VoltarInventario()
