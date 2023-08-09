@@ -29,7 +29,7 @@ public class MenuSecundarioMenager : MonoBehaviour
 
     private void CarregarCenaMenuPrincipal()
     {
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("MenuBlueScene");
     }
 
     private void CarregarCenaInventario()
