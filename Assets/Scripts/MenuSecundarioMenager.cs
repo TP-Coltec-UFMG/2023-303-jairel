@@ -10,15 +10,15 @@ public class MenuSecundarioMenager : MonoBehaviour
     [SerializeField] private string Inventario;
 
     public void Voltar(){        
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(MenuPrincipal);
     }
 
     public void VoltarInventario(){
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(Inventario);
     }
 
     public void AvancaFases(){
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(MenuFases);
     }
     
     public void FaseMula(){

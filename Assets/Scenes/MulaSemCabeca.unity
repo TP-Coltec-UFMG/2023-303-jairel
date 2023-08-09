@@ -636,9 +636,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ea7ced283b9c044b1ca008f91c0162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossPrefab: {fileID: 7661553450059480640, guid: 654341a0464acea41a72c7386c6806bb, type: 3}
   mobPrefab: {fileID: 1103550939320839992, guid: 51a57e1028c010345ad665e0a2498626, type: 3}
   tiroPrefab: {fileID: 4421315683067004294, guid: 78b22edb3cb291104ba1cc0ec34fdbc8, type: 3}
-  numeroMobs: 20
+  numeroMobs: 10
   velocidadeMob: 5
   intervaloEntreSpawns: 1
   mobsEliminated: 0
@@ -819,8 +820,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321901416}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2075, y: 0.0292, z: 0}
-  m_LocalScale: {x: 1.0899488, y: 0.9252323, z: 0.66781515}
+  m_LocalPosition: {x: 0.0036, y: 0.0292, z: 0}
+  m_LocalScale: {x: 1.1112028, y: 0.9252323, z: 0.66781515}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
