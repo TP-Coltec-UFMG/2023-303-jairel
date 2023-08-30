@@ -8,27 +8,18 @@ public class MenuSecundarioMenager : MonoBehaviour
 
     [SerializeField] private AudioSource somAvancar;
     [SerializeField] private AudioSource somVoltar;
-    private void Update()
-    {
-        // Escutar as teclas de seta
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            VoltarMenuPrincipal();
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            AvancaFases();
-        }
-    }
-    public void VoltarMenuPrincipal()
+
+    public void Voltar()
     {
         somVoltar.Play();
         Invoke("CarregarCenaMenuPrincipal", somVoltar.clip.length);
+        SceneManager.LoadScene(0);
     }
 
-    private void CarregarCenaMenuPrincipal()
+    public void VoltarInventario()
     {
-        SceneManager.LoadScene("MenuBlueScene");
+        somVoltar.Play();
+        Invoke("CarregarCenaInventario", somVoltar.clip.length);
     }
 
     public void AvancaFases()
@@ -52,13 +43,10 @@ public class MenuSecundarioMenager : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
-
-
-    public void FaseMula()
-    {
+    
+    public void FaseMula(){
         SceneManager.LoadScene(1);
         Jogador.instance.SetControlsEnabled(true);
         Time.timeScale = 1;
     }
-
 }
