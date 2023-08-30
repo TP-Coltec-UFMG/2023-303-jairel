@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
     private Animator animator;
-    private int maxLife = 60;
+    public int maxLife;
     private int currentLife;
 
-    void Awake()
+    private void Awake()
     {
         animator = GetComponent<Animator>();
         animator.SetBool("mexe", true);
@@ -20,7 +18,6 @@ public class Boss : MonoBehaviour
         if (other.CompareTag("tiro"))
         {
             Destroy(other.gameObject);
-
             currentLife--;
 
             if (currentLife <= 0){
@@ -30,8 +27,6 @@ public class Boss : MonoBehaviour
         }
 
         if (other.CompareTag("barrera"))
-        {
             GameManager.instance.FinalizarJogo();
-        }
     }
 }
