@@ -25,25 +25,28 @@ public class MenuSecundarioMenager : MonoBehaviour
     public void AvancaFases()
     {
         somAvancar.Play();
-        Invoke("CarregarCenaFases", somAvancar.clip.length);
+        SceneManager.LoadScene(3);
+        //Invoke("CarregarCenaFases", somAvancar.clip.length);
     }
 
     private void CarregarCenaMenuPrincipal()
     {
-        SceneManager.LoadScene("MenuBlueScene");
+        SceneManager.LoadScene(0);
     }
 
     private void CarregarCenaInventario()
     {
-        SceneManager.LoadScene("Inventario");
+        SceneManager.LoadScene(2);
     }
 
     private void CarregarCenaFases()
     {
-        SceneManager.LoadScene("MenuFases");
+        SceneManager.LoadScene(3);
     }
     
     public void FaseMula(){
-        SceneManager.LoadScene("MulaSemCabeca");
+        SceneManager.LoadScene(1);
+        Jogador.instance.SetControlsEnabled(true);
+        Time.timeScale = 1;
     }
 }

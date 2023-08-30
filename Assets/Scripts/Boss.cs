@@ -12,7 +12,7 @@ public class Boss : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         animator.SetBool("mexe", true);
-        currentLife = maxLife; // Initialize current life
+        currentLife = maxLife;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -23,8 +23,10 @@ public class Boss : MonoBehaviour
 
             currentLife--;
 
-            if (currentLife <= 0)
-                Destroy(gameObject); // Destroy the mob
+            if (currentLife <= 0){
+                Destroy(gameObject);
+                GameManager.instance.showWin();
+            }
         }
 
         if (other.CompareTag("barrera"))

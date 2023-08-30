@@ -13,6 +13,12 @@ public class ControladorSom : MonoBehaviour
     private float previousMusicalVolume;
     private float previousEfeitosVolume;
 
+    [SerializeField] private Sprite somLigadoSprite;
+    [SerializeField] private Sprite somDesligadoSprite;
+
+    [SerializeField] private Image muteImage;
+
+
     private void Start()
     {
         // Obtém os volumes iniciais ao iniciar o jogo
@@ -67,21 +73,25 @@ public class ControladorSom : MonoBehaviour
     private void MuteEfeitosSonoros()
     {
         mixer.SetFloat("EfeitosSonoros", -80);
+        muteImage.sprite = somDesligadoSprite;
     }
 
     private void MuteFundoMusical()
     {
         mixer.SetFloat("Fundo", -80);
+        muteImage.sprite = somDesligadoSprite;
     }
 
     private void UnmuteEfeitosSonoros()
     {
         mixer.SetFloat("EfeitosSonoros", previousEfeitosVolume);
+        muteImage.sprite = somLigadoSprite;
     }
 
     private void UnmuteFundoMusical()
     {
         mixer.SetFloat("Fundo", previousMusicalVolume);
+        muteImage.sprite = somLigadoSprite;
     }
 
 }
