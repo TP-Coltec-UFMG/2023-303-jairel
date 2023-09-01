@@ -23,7 +23,8 @@ public class MenuTerciarioMenager : MonoBehaviour
     public void VoltarInventario()
     {
         somVoltar.Play();
-        Invoke("CarregarMenuInventario", somVoltar.clip.length);
+        SceneManager.LoadScene(2);
+        //Invoke("CarregarMenuInventario", somVoltar.clip.length);
     }
 
     private void CarregarMenuInventario()

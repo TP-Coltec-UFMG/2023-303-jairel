@@ -19,24 +19,30 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject GameOver;
     [SerializeField] private GameObject Menu;
     [SerializeField] private GameObject DialogueManager;
-    private int currentDialogueIndex = 0;
-    private bool showingDialogues = false;
 
     private float countdownTimer = 3f; // Tempo de contagem regressiva
     private bool countingDown = true;
 
     private bool isPause = false;
+    private bool isGlobalPause = false; // Variável de pausa global
 
-    void Start()
+    private void Awake()
     {
         instance = this;
+        Time.timeScale = 1; // Garante que o tempo esteja normal ao carregar a cena
+        isPause = false; // Garante que a pausa não esteja ativada ao carregar a cena
+        isGlobalPause = false; // Garante que a pausa global não esteja ativada ao carregar a cena
     }
-
-    public void abreMenu(){
+    
+    public void abreMenu()
+    {
         Time.timeScale = 0;
         this.Menu.SetActive(true);
+        isPause = true;
     }
-    public void fechaMenu(){
+
+    public void fechaMenu()
+    {
         Time.timeScale = 1;
         this.Menu.SetActive(false);
         isPause = false;
@@ -44,12 +50,24 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-
-        if (isPause) abreMenu();
-        else if (!isPause) fechaMenu();
+        if (isGlobalPause)
+        {
+            // Lida com a pausa global
+            return;
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
+        {
             isPause = !isPause;
+            if (isPause)
+            {
+                abreMenu();
+            }
+            else
+            {
+                fechaMenu();
+            }
+        }
 
         if (countingDown)
         {
@@ -57,7 +75,7 @@ public class GameManager : MonoBehaviour
             if (countdownTimer <= 0f)
                 StartSpawning();
         }
-        
+
         else
         {
             if (mobsEliminated >= numeroMobs && bossSpawned == 0)
@@ -102,6 +120,7 @@ public class GameManager : MonoBehaviour
 
     public void FinalizarJogo()
     {
+        isGlobalPause = true; // Ativa a pausa global
         Time.timeScale = 0;
         this.GameOver.SetActive(true);
 
@@ -114,6 +133,7 @@ public class GameManager : MonoBehaviour
 
     public void showWin()
     {
+        isGlobalPause = true; // Ativa a pausa global
         Time.timeScale = 0;
         this.DialogueManager.SetActive(true);
 
@@ -124,7 +144,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void BackMenu(){
-        MenuSecundarioMenager.instance.CarregarCenaFases();
+    public void BackMenu()
+    {
+        isGlobalPause = false; // Desativa a pausa global
+        SceneManager.LoadScene(3);
     }
-}
+
+    public void ResumeGame()
+    {
+        isGlobalPause = false; // Desativa a pausa global
+        Time.timeScale = 1; // Volta ao tempo normal
+
+        Jogador jogadorScript = FindObjectOfType<Jogador>();
+        if (jogadorScript != null)
+        {
+            jogadorScript.SetControlsEnabled(true);
+        }
+}}

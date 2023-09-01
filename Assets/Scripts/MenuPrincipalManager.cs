@@ -134,7 +134,8 @@ public class MenuPrincipalManager : MonoBehaviour
     {
         currentMenu = 2;
         somAvancar.Play();
-        Invoke("CarregarCenaInventario", somAvancar.clip.length);
+        SceneManager.LoadScene("Inventario");
+        //Invoke("CarregarCenaInventario", somAvancar.clip.length);
     }
 
     private void CarregarCenaInventario()
