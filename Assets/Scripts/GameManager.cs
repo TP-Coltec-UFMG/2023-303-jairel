@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,21 +17,40 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     [SerializeField] private GameObject GameOver;
+    [SerializeField] private GameObject Menu;
     [SerializeField] private GameObject DialogueManager;
-    [SerializeField] private GameObject FiltroDaltonismo;
     private int currentDialogueIndex = 0;
     private bool showingDialogues = false;
 
     private float countdownTimer = 3f; // Tempo de contagem regressiva
     private bool countingDown = true;
 
+    private bool isPause = false;
+
     void Start()
     {
         instance = this;
     }
 
+    public void abreMenu(){
+        Time.timeScale = 0;
+        this.Menu.SetActive(true);
+    }
+    public void fechaMenu(){
+        Time.timeScale = 1;
+        this.Menu.SetActive(false);
+        isPause = false;
+    }
+
     private void Update()
     {
+
+        if (isPause) abreMenu();
+        else if (!isPause) fechaMenu();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            isPause = !isPause;
+
         if (countingDown)
         {
             countdownTimer -= Time.deltaTime;
@@ -45,10 +65,6 @@ public class GameManager : MonoBehaviour
                 bossSpawned = 1; // Para garantir que o chefe seja spawnado apenas uma vez
                 Invoke("SpawnBoss", 4f); // Espere 4 segundos após eliminar todos os inimigos para spawnar o chefe
             }
-        }
-
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            this.FiltroDaltonismo.SetActive(true);
         }
     }
 
@@ -108,4 +124,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void BackMenu(){
+        MenuSecundarioMenager.instance.CarregarCenaFases();
+    }
 }

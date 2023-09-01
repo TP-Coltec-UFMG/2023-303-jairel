@@ -8,6 +8,6 @@ public class GameOver : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
-            SceneManager.LoadScene("MenuFases");
+            GameManager.instance.BackMenu();
     }
 }
