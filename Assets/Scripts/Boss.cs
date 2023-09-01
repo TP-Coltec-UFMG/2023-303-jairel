@@ -5,7 +5,7 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     private Animator animator;
-    private int maxLife = 60;
+    public int maxLife;
     private int currentLife;
 
     void Awake()
