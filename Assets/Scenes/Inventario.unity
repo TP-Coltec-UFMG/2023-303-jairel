@@ -1607,7 +1607,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1112132603}
         m_TargetAssemblyTypeName: MenuSecundarioMenager, Assembly-CSharp
-        m_MethodName: Voltar
+        m_MethodName: VoltarMenuPrincipal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

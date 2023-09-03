@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,28 +17,65 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     [SerializeField] private GameObject GameOver;
+    [SerializeField] private GameObject Menu;
     [SerializeField] private GameObject DialogueManager;
-    [SerializeField] private GameObject FiltroDaltonismo;
-    private int currentDialogueIndex = 0;
-    private bool showingDialogues = false;
 
     private float countdownTimer = 3f; // Tempo de contagem regressiva
     private bool countingDown = true;
 
-    void Start()
+    private bool isPause = false;
+    private bool isGlobalPause = false; // Variável de pausa global
+
+    private void Awake()
     {
         instance = this;
+        Time.timeScale = 1; // Garante que o tempo esteja normal ao carregar a cena
+        isPause = false; // Garante que a pausa não esteja ativada ao carregar a cena
+        isGlobalPause = false; // Garante que a pausa global não esteja ativada ao carregar a cena
+    }
+    
+    public void abreMenu()
+    {
+        Time.timeScale = 0;
+        this.Menu.SetActive(true);
+        isPause = true;
+    }
+
+    public void fechaMenu()
+    {
+        Time.timeScale = 1;
+        this.Menu.SetActive(false);
+        isPause = false;
     }
 
     private void Update()
     {
+        if (isGlobalPause)
+        {
+            // Lida com a pausa global
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isPause = !isPause;
+            if (isPause)
+            {
+                abreMenu();
+            }
+            else
+            {
+                fechaMenu();
+            }
+        }
+
         if (countingDown)
         {
             countdownTimer -= Time.deltaTime;
             if (countdownTimer <= 0f)
                 StartSpawning();
         }
-        
+
         else
         {
             if (mobsEliminated >= numeroMobs && bossSpawned == 0)
@@ -45,10 +83,6 @@ public class GameManager : MonoBehaviour
                 bossSpawned = 1; // Para garantir que o chefe seja spawnado apenas uma vez
                 Invoke("SpawnBoss", 4f); // Espere 4 segundos após eliminar todos os inimigos para spawnar o chefe
             }
-        }
-
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            this.FiltroDaltonismo.SetActive(true);
         }
     }
 
@@ -86,6 +120,7 @@ public class GameManager : MonoBehaviour
 
     public void FinalizarJogo()
     {
+        isGlobalPause = true; // Ativa a pausa global
         Time.timeScale = 0;
         this.GameOver.SetActive(true);
 
@@ -98,6 +133,7 @@ public class GameManager : MonoBehaviour
 
     public void showWin()
     {
+        isGlobalPause = true; // Ativa a pausa global
         Time.timeScale = 0;
         this.DialogueManager.SetActive(true);
 
@@ -108,4 +144,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
-}
+    public void BackMenu()
+    {
+        isGlobalPause = false; // Desativa a pausa global
+        SceneManager.LoadScene(3);
+    }
+
+    public void ResumeGame()
+    {
+        isGlobalPause = false; // Desativa a pausa global
+        Time.timeScale = 1; // Volta ao tempo normal
+
+        Jogador jogadorScript = FindObjectOfType<Jogador>();
+        if (jogadorScript != null)
+        {
+            jogadorScript.SetControlsEnabled(true);
+        }
+}}

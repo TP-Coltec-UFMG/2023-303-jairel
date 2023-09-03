@@ -8,6 +8,13 @@ public class MenuSecundarioMenager : MonoBehaviour
 
     [SerializeField] private AudioSource somAvancar;
     [SerializeField] private AudioSource somVoltar;
+
+    public static MenuSecundarioMenager instance;
+
+    void Start(){
+        instance = this;
+    }
+
     private void Update()
 {
     // Escutar as teclas de seta
@@ -23,21 +30,23 @@ public class MenuSecundarioMenager : MonoBehaviour
     public void VoltarMenuPrincipal()
     {
         somVoltar.Play();
-        Invoke("CarregarCenaMenuPrincipal", somVoltar.clip.length);
+        SceneManager.LoadScene(0);
+        //Invoke("CarregarCenaMenuPrincipal", somVoltar.clip.length);
     }
 
     private void CarregarCenaMenuPrincipal()
     {
-        SceneManager.LoadScene("MenuBlueScene");
+        SceneManager.LoadScene(0);
     }
 
     public void AvancaFases()
     {
         somAvancar.Play();
-        Invoke("CarregarCenaFases", somAvancar.clip.length);
+        SceneManager.LoadScene("MenuFases");
+        //Invoke("CarregarCenaFases", somAvancar.clip.length);
     }
 
-    private void CarregarCenaFases()
+    public void CarregarCenaFases()
     {
         SceneManager.LoadScene("MenuFases");
     }

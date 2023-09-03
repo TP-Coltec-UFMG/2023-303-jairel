@@ -8,7 +8,6 @@ public class MenuTerciarioMenager : MonoBehaviour
 
     [SerializeField] private AudioSource somAvancar;
     [SerializeField] private AudioSource somVoltar;
-    private int previousMenu = 1;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -23,19 +22,19 @@ public class MenuTerciarioMenager : MonoBehaviour
 
     public void VoltarInventario()
     {
-        previousMenu = 1;
         somVoltar.Play();
-        Invoke("CarregarMenuInventario", somVoltar.clip.length);
+        SceneManager.LoadScene(2);
+        //Invoke("CarregarMenuInventario", somVoltar.clip.length);
     }
 
     private void CarregarMenuInventario()
     {
-        SceneManager.LoadScene("Inventario");
+        SceneManager.LoadScene(2);
     }
 
     public void FaseMula()
     {
-        SceneManager.LoadScene("MulaSemCabeca");
+        SceneManager.LoadScene(1);
     }
 
 
