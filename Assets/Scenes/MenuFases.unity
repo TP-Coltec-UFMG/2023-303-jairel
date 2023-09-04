@@ -729,7 +729,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2069533119}
         m_TargetAssemblyTypeName: MenuTerciarioMenager, Assembly-CSharp
-        m_MethodName: FaseMula
+        m_MethodName: FaseBoto
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1470,7 +1470,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 190eb8771d3330f419eeb7995da1dbfd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 384bc2c3b278b6143bf734408e9170a3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

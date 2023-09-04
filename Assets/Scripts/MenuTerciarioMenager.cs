@@ -36,6 +36,16 @@ public class MenuTerciarioMenager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    
+    public void FaseBoto()
+    {
+        SceneManager.LoadScene(4);
+    }
+    
+    /*public void FaseBoi()
+    {
+        SceneManager.LoadScene(1);
+    }*/
 
 
 }
