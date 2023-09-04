@@ -8,15 +8,15 @@
 
 ㅤㅤUm jogo de ordas com tema Folclore Brasileiro e conta com personas como: <br>
   - Mula sem cabeça
-  - Saci Perere
+  - Boi Tata
   - Boto cor de Rosa
-  - Curupira <br>
-  Entre outros... <br></br>
-    A ideia inicial é trazer um jogo de layers no estilo ``plants vs zombies`` mesclado com ordas por level no estilo ``swamp attack`` 
+   (ou quase)
+
+    A ideia inicial é trazer um jogo de movimentação unilateral no estilo ``space-invaders`` mesclado com ordas por level no estilo ``swamp attack`` mais a mecânica de ``tetris`` cosagrando a derrota quando algum inimigo ultrapassa a linha limita estipulada 
 
 ## Backstory
 
-``Loading...``
+O ultra-capitalista John Guts quer usar os personagens do folclore para seus ganhos de produção, o impeça atordoando os animais e acabe com seus planos!
 
 ## Softwares 
 
@@ -68,9 +68,9 @@
             </td>
             <td align="center">
               <a href="https://github.com/alvimdev/">
-                <img src="https://imgs.search.brave.com/t3XOFMVvTir0WUEAoRsYU4a4nkvriCpo8ILe3j_zK5E/rs:fit:959:959:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzE1LzRi/LzU0LzE1NGI1NGFm/NWRhZTUyYjg3ZDZj/YTIyMmQ1ZjMyYjg0/LmpwZw" width="100px;" alt="Manhwa charater of my GitHub pfp"/><br>
+                <img src="https://avatars.githubusercontent.com/u/83983141?v=4" width="100px;" alt="Manhwa charater of my GitHub pfp"/><br>
                 <sub>
-                  <b>robozin</b>
+                  <b>calvim</b>
                 </sub>
               </a>
             </td>
