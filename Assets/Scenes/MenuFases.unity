@@ -1698,7 +1698,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mula sem Cabe\xE7a"
+  m_text: Boto cor Derosa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b9dcad8563712d152bece20ebaf985dc, type: 2}
   m_sharedMaterial: {fileID: -8298010574049954095, guid: b9dcad8563712d152bece20ebaf985dc, type: 2}
@@ -2381,8 +2381,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1491437051}
   m_HandleRect: {fileID: 1491437050}
   m_Direction: 0
-  m_Value: 0.50000006
-  m_Size: 0.40943757
+  m_Value: 0.5000001
+  m_Size: 0.40943754
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

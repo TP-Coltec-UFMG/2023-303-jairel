@@ -74,10 +74,7 @@ public class GameManager : MonoBehaviour
             countdownTimer -= Time.deltaTime;
             if (countdownTimer <= 0f)
                 StartSpawning();
-        }
-
-        else
-        {
+        } else {
             if (mobsEliminated >= numeroMobs && bossSpawned == 0)
             {
                 bossSpawned = 1; // Para garantir que o chefe seja spawnado apenas uma vez
