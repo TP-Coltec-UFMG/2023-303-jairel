@@ -16,11 +16,17 @@ EditorBuildSettings:
     guid: efa4e0d57cd748d1bb1a34e884b222e7
   - enabled: 1
     path: Assets/Scenes/MulaSemCabeca.unity
-    guid: 198596dce34cc7411a6843e1be789121
+    guid: 1811e870133ef67c083c498ffc9e1a78
   - enabled: 1
     path: Assets/Scenes/Inventario.unity
     guid: 286eda9bfef5e9bd4a0f90cab67d0e5c
   - enabled: 1
     path: Assets/Scenes/MenuFases.unity
     guid: d75a11599971879cf82bddddf71fa2d4
+  - enabled: 1
+    path: Assets/Scenes/BotoCorDeRosa.unity
+    guid: b10f2d4853b52bf35a1f5dda6a100212
+  - enabled: 1
+    path: Assets/Scenes/BumbaMeuBoi.unity
+    guid: db35a0678b36bc21494548cc98c97b25
   m_configObjects: {}
