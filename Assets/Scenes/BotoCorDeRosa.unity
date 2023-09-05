@@ -741,7 +741,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428769180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.38, y: 0.02, z: 0}
+  m_LocalPosition: {x: -6.71, y: 0.02, z: 0}
   m_LocalScale: {x: 5.3349667, y: 40.958187, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -985,7 +985,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596291555}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.59, y: -0.02, z: 0}
+  m_LocalPosition: {x: -8.83, y: -0.02, z: 0}
   m_LocalScale: {x: 2.6673, y: 2.5777364, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1794,8 +1794,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ea7ced283b9c044b1ca008f91c0162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossPrefab: {fileID: 7661553450059480640, guid: 654341a0464acea41a72c7386c6806bb, type: 3}
-  mobPrefab: {fileID: 1103550939320839992, guid: 51a57e1028c010345ad665e0a2498626, type: 3}
+  bossPrefab: {fileID: 3474809809273771696, guid: 2e50cd19bfa68f63fa78577db7286605, type: 3}
+  mobPrefab: {fileID: 867132612983542442, guid: 9de3885d0623a009f9a2e12fbbb209ee, type: 3}
   tiroPrefab: {fileID: 4421315683067004294, guid: 78b22edb3cb291104ba1cc0ec34fdbc8, type: 3}
   numeroMobs: 20
   velocidadeMob: 5
@@ -2142,8 +2142,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321901416}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9994, y: -0.0297, z: 0}
-  m_LocalScale: {x: 1.3871313, y: 1.3826306, z: 0.66781515}
+  m_LocalPosition: {x: -0.0204, y: -0.0689, z: 0}
+  m_LocalScale: {x: 1.6751493, y: 1.4588506, z: 0.66781515}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
