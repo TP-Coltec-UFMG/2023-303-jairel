@@ -7,6 +7,7 @@ TagManager:
   - tiro
   - barrera
   - parede
+  - CenaJogo
   layers:
   - Default
   - TransparentFX

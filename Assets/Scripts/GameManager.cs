@@ -14,11 +14,13 @@ public class GameManager : MonoBehaviour
     private int mobsSpawned = 0;
     private int bossSpawned = 0;
     public int mobsEliminated = 0;
+    public int vidaBoss = 90;
 
     public static GameManager instance;
     [SerializeField] private GameObject GameOver;
     [SerializeField] private GameObject Menu;
     [SerializeField] private GameObject DialogueManager;
+
 
     private float countdownTimer = 3f; // Tempo de contagem regressiva
     private bool countingDown = true;
@@ -67,6 +69,11 @@ public class GameManager : MonoBehaviour
             {
                 fechaMenu();
             }
+        }
+
+        if (isPause && Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            BackMenu();
         }
 
         if (countingDown)

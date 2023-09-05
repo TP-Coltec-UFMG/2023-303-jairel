@@ -27,6 +27,14 @@ public class DialogueController : MonoBehaviour
         }
     }
 
+    private void Update(){
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+           NextImage(); 
+        }
+    }
+
     private void UpdateDialogueImage()
     {
         dialogueImage.sprite = dialogueSprites[currentIndex];
