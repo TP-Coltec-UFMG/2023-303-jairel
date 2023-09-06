@@ -19,6 +19,25 @@ public class MenuEscolheDificulade : MonoBehaviour
         Menu();
     }
 
+    private void Update(){
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            ClicaBotaoFacil();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            ClicaBotaoMedio();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            ClicaBotaoDificil();
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            VoltaMenuFases();
+        }
+    }
+
     public void setFalse()
     {
         // Obtém todos os GameObjects ativos na cena atual
@@ -54,7 +73,7 @@ public class MenuEscolheDificulade : MonoBehaviour
         // Itera por todos os GameObjects
         foreach (GameObject objeto in objetosNaCena)
         {
-            if (objeto.CompareTag("CenaJogo")|| objeto.CompareTag("barrera") || objeto.CompareTag("parede"))
+            if (objeto.CompareTag("CenaJogo")|| objeto.CompareTag("barrera") || objeto.CompareTag("parede") || objeto.CompareTag("Event System"))
             {
                 // Ative o objeto
                 objeto.SetActive(true);
@@ -78,7 +97,7 @@ public class MenuEscolheDificulade : MonoBehaviour
 
         if(Mob != null){
             
-            Mob.velocidadeMob = 10;
+            Mob.velocidadeMob = 5;
         }
 
     }
@@ -91,7 +110,7 @@ public class MenuEscolheDificulade : MonoBehaviour
         }
         if(Mob != null){
             
-            Mob.velocidadeMob = 7;
+            Mob.velocidadeMob = 8;
         }
     }
     public void ClicaBotaoDificil()
@@ -103,7 +122,10 @@ public class MenuEscolheDificulade : MonoBehaviour
         }
         if(Mob != null){
             
-            Mob.velocidadeMob = 12;
+            Mob.velocidadeMob = 13;
         }
+    }
+    public void VoltaMenuFases(){
+        SceneManager.LoadScene("MenuFases");
     }
 }

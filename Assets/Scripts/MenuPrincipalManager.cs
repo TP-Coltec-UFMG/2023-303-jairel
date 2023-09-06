@@ -10,7 +10,6 @@ public class MenuPrincipalManager : MonoBehaviour
 
     [SerializeField] private GameObject painelMenuInicial;
     [SerializeField] private GameObject painelOpcoes;
-    [SerializeField] private GameObject painelAcessibilidades;
     [SerializeField] private GameObject painelInfo;
     [SerializeField] private GameObject painelHelp;
     [SerializeField] private string Inventario;
@@ -23,14 +22,13 @@ public class MenuPrincipalManager : MonoBehaviour
 
     public void setFalse(){
         painelMenuInicial.SetActive(false);
-        painelAcessibilidades.SetActive(false);
         painelOpcoes.SetActive(false);
         painelInfo.SetActive(false);
         painelHelp.SetActive(false);
     }
 
     public void Start(){      
-        menus = new GameObject[] { painelMenuInicial, painelOpcoes, painelAcessibilidades, painelInfo, painelHelp };
+        menus = new GameObject[] { painelMenuInicial, painelOpcoes, painelInfo, painelHelp };
         SetActiveMenu(currentMenu);
     }
 
@@ -75,22 +73,11 @@ public class MenuPrincipalManager : MonoBehaviour
                 AbrirHelp();
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha6))
-        {
-            if (currentMenu == 1)
-            {
-                AbrirAcessibilidades();
-            }
-        }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if (currentMenu == 1)
             {
                 FecharOpcoes();
-            }
-            else if (currentMenu == 2)
-            {
-                FecharAcessibilidades();
             }
             else if (currentMenu == 3)
             {
@@ -156,19 +143,6 @@ public class MenuPrincipalManager : MonoBehaviour
         somVoltar.Play();
         setFalse();
         painelMenuInicial.SetActive(true);
-    }
-    public void AbrirAcessibilidades(){
-        currentMenu = 2;
-        somAvancar.Play();
-        setFalse();
-        painelAcessibilidades.SetActive(true);
-    }
-    public void FecharAcessibilidades(){
-        currentMenu = 1;
-        somVoltar.Play();
-        setFalse();
-        painelOpcoes.SetActive(true);
-
     }
     public void AbrirInfo(){
         currentMenu = 3;

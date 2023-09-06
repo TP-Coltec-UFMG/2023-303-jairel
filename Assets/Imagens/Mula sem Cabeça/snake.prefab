@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaMaxima: 1
-  spriteMorto: {fileID: 21300000, guid: 616e5422760d82702b24d4f84cda1a03, type: 3}
+  spriteMorto: {fileID: 21300000, guid: 4d76db7dfde3e8c6cad747bc46a41c47, type: 3}
   isDead: 0
 --- !u!70 &4935398830399229457
 CapsuleCollider2D:

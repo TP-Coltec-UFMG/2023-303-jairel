@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaMaxima: 0
-  spriteMorto: {fileID: 0}
+  spriteMorto: {fileID: 21300000, guid: 4d76db7dfde3e8c6cad747bc46a41c47, type: 3}
   isDead: 0
 --- !u!95 &867132612983542613
 Animator:

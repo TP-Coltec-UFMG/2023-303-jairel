@@ -53,10 +53,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         if (isGlobalPause)
-        {
-            // Lida com a pausa global
             return;
-        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {

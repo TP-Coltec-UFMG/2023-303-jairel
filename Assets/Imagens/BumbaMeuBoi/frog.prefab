@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaMaxima: 0
-  spriteMorto: {fileID: 0}
+  spriteMorto: {fileID: 21300000, guid: 4d76db7dfde3e8c6cad747bc46a41c47, type: 3}
   isDead: 0
 --- !u!50 &8786862532119131268
 Rigidbody2D:
