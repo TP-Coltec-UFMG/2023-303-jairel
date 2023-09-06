@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MenuTerciarioMenager : MonoBehaviour
@@ -8,15 +9,31 @@ public class MenuTerciarioMenager : MonoBehaviour
 
     [SerializeField] private AudioSource somAvancar;
     [SerializeField] private AudioSource somVoltar;
+
+    public Scrollbar scrollbar;
+
+    private void Start()
+    {
+        scrollbar.value = 0f;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             VoltarInventario();
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             FaseMula();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            FaseBotoCorDeRosa();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            FaseBumbaMeuBoi();
         }
     }
 

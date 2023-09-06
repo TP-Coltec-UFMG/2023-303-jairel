@@ -11,6 +11,19 @@ public class MenuSecundarioMenager : MonoBehaviour
 
     public static MenuSecundarioMenager instance;
 
+    public GameObject Canva;
+    public GameObject Conquistas;
+
+    public void AbreConquistas(){
+        Canva.SetActive(false);
+        Conquistas.SetActive(true);
+    }
+
+    public void fechaConquistas(){
+        Canva.SetActive(true);
+        Conquistas.SetActive(false);
+    }
+
     void Start(){
         instance = this;
     }
