@@ -27,7 +27,6 @@ O ultra-capitalista John Biggle (que estranhamente se veste de pirata ou cowboy 
 ## Overview
 
   <abbr title="Menu's outGame: Neles podemos navegar entre opções de audio, tutoriais e escolha de fases (obs: existe um esater-egg em um deles, tente descobrir)"><img src="https://github.com/alvim-coltec/JAIREL/assets/83983141/3ebbd012-246e-4865-ae5c-ae101f20e373" alt="collage"></abbr>
- </br>
   <abbr title="Menu's inGame: Esses são responsáveis pela tela de 'morte' do chico e pela acessibilidade acerca de dautonismos, podendo mudar o filtro do game e facilitar a gameplay"><img src="https://github.com/alvim-coltec/JAIREL/assets/83983141/670b4f1b-1039-494a-9cea-bad9c02131e9" alt="collage2"></abbr>
 
 ##
