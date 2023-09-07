@@ -10,7 +10,7 @@
   - Mula sem cabeça
   - Boi Tatá
   - Boto cor de Rosa
-  - **Chico Bento**
+  - **Chico Bento** (player)
     
     A ideia inicial é trazer um jogo no estilo ``space invaders`` mesclado com ordas por level no estilo ``swamp attack`` mais a mecânica de ``tétris`` onde a derrota é consagrada quando os inimigos cruzam uma linha limite
 
@@ -25,38 +25,19 @@ O ultra-capitalista John Biggle (que estranhamente se veste de pirata ou cowboy 
 ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
 
 ## Overview
-<div align="center">
-    <img src="https://github.com/alvimdev/2023-303-jairel/assets/83983141/548b2e71-3268-4bd1-b1bd-14e89adf4349" height="410">
-    <p>Esse é o design do menu inicial, nele temos os botões que seguem para os submenus</p>
-    <br>
-    <img src="https://github.com/alvimdev/2023-303-jairel/assets/83983141/24ea62f0-244e-4619-8a97-c434c76a6c0b" height="410">
-    <p>No submenu <strong>opções</strong> temos os sliders que controlam o volume e o botão do submenu acessibilidade</p>
-    <br>
-    <img src="https://github.com/alvimdev/2023-303-jairel/assets/83983141/ce5d2360-6300-422a-86cf-952edcd8eaa1" height="410">
-    <p>No submenu <strong>acessibilidades</strong> temos as opções de acessibilidade a daltonismo e a surdez</p>
-    <br>
-    <img src="https://github.com/alvimdev/2023-303-jairel/assets/83983141/6945574d-1bd3-4acb-b6cb-83474408a1dd" height="410">
-    <p>No seção <strong>ajuda</strong> temos dicas de como ativar as acessibilidades e os tipos disponíveis</p>
-    <br>
-    <img src="https://github.com/alvimdev/2023-303-jairel/assets/83983141/3247c31e-ffa6-4445-b1a6-b061ce0df5e2" height="410">
-    <p>No seção <strong>sobre</strong> temos uma breve descrição do grupo e, também, do projeto</p>
-    <br>
-    <img src="https://github.com/alvimdev/2023-303-jairel/assets/83983141/cac384ea-e2de-427f-a5af-8881701e50df">
-    <p>Após clicar em jogar, o player é redirecionado para a tela de seleção de 'fases', onde é possível escolher qual personagem do folclore quer combater</p>
-  <br>
-    <img src="https://github.com/alvimdev/2023-303-jairel/assets/83983141/d41fea97-37d4-4969-bf33-783fa79ce39e">
-    <p>Imagem do jogo inicial</p>
-</div>
 
-<br><br>
+  <abbr title="Menu's outGame: Neles podemos navegar entre opções de audio, tutoriais e escolha de fases (obs: existe um esater-egg em um deles, tente descobrir)"><img src="https://github.com/alvim-coltec/JAIREL/assets/83983141/3ebbd012-246e-4865-ae5c-ae101f20e373" alt="collage"></abbr>
+  <br></br>
+  <abbr title="Menu's inGame: Esses são responsáveis pela tela de 'morte' do chico e pela acessibilidade acerca de dautonismos, podendo mudar o filtro do game e facilitar a gameplay"><img src="https://github.com/alvim-coltec/JAIREL/assets/83983141/670b4f1b-1039-494a-9cea-bad9c02131e9" alt="collage2"></abbr>
+
+##
+
+Link do vídeo de apresentação: [https://drive.google/file/d/video_jairel](https://drive.google.com/file/d/1uULDLdy63oDrwizvTTUx8EvKZoKaam9T/view?usp=sharing)
+<br>
 
 ## Contribuitors:
 
-<dl>
-  <dd>
-    <dl>
-      <dd>
-        <table style="magrin-left: 40px;">
+<table style="magrin-left: 40px;">
           <tr>
           <td align="center">
               <a href="https://github.com/rafaelrat/">
@@ -100,7 +81,3 @@ O ultra-capitalista John Biggle (que estranhamente se veste de pirata ou cowboy 
             </td>
           </tr>
         </table>
-      </dd>
-    </dl>
-  </dd>
-</dl>
